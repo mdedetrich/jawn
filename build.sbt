@@ -101,6 +101,7 @@ lazy val supportPlay = support("play")
 lazy val supportRojoma = support("rojoma")
 lazy val supportRojomaV3 = support("rojoma-v3")
 lazy val supportSpray = support("spray")
+lazy val scalaJson = support("scala-json")
 
 lazy val benchmark = project.in(file("benchmark"))
   .dependsOn(all.map(Project.classpathDependency[Project]): _*)
@@ -111,4 +112,4 @@ lazy val benchmark = project.in(file("benchmark"))
   .settings(noPublish: _*)
 
 lazy val all =
-  Seq(parser, ast, supportArgonaut, supportJson4s, supportPlay, supportRojoma, supportRojomaV3, supportSpray)
+  Seq(parser, ast, supportArgonaut, supportJson4s, supportPlay, supportRojoma, supportRojomaV3, supportSpray, scalaJson)
